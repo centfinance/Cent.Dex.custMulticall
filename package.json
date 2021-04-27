@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "cent.dex.custmulticall",
+    "name": "symmetric_custmulticall",
     "version": "0.0.1",
     "license": "GPL-3.0-only",
     "description": "Cent Dex custom multicall Contracts and ABI",
@@ -39,6 +39,7 @@
         "web3": "^1.3.4"
     },
     "dependencies": {
+        "@celo/contractkit": "^1.2.0",
         "@truffle/hdwallet-provider": "^1.2.1",
         "decimal.js": "^10.2.1",
         "dotenv": "^8.2.0",
