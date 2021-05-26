@@ -1,4 +1,4 @@
-pragma solidity 0.5.12;
+pragma solidity 0.6.0;
 
 pragma experimental ABIEncoderV2;
 
@@ -39,8 +39,6 @@ contract PoolState {
               address tokenAddr = pools[i][j];
               // console.log("Token: %s", tokenAddr);
               results[count] = getUint(poolAddr, abi.encodeWithSignature("getBalance(address)", tokenAddr));
-              count++;
-              results[count] = getUint(poolAddr, abi.encodeWithSignature("getDenormalizedWeight(address)", tokenAddr));
               count++;
               // console.log("Token Done");
             }
