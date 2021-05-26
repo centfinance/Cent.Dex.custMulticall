@@ -40,8 +40,6 @@ contract PoolState {
               // console.log("Token: %s", tokenAddr);
               results[count] = getUint(poolAddr, abi.encodeWithSignature("getBalance(address)", tokenAddr));
               count++;
-              results[count] = getUint(poolAddr, abi.encodeWithSignature("getDenormalizedWeight(address)", tokenAddr));
-              count++;
               // console.log("Token Done");
             }
         }

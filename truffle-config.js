@@ -9,8 +9,8 @@ const web3 = new Web3();
 
 const mnemonicPhrase = process.env.MNEMONIC;
 const privateKey = process.env.PRIVATEKEY;
-const kit = ContractKit.newKitFromWeb3(web3_alfajores) // Change to Celo web3 for main net deployment
-const account = web3_alfajores.eth.accounts.privateKeyToAccount(privateKey)
+const kit = ContractKit.newKitFromWeb3(web3_celo) // Change to Celo web3 for main net deployment
+const account = web3_celo.eth.accounts.privateKeyToAccount(privateKey)
 kit.connection.addAccount(account.privateKey);
 
 module.exports = {
@@ -60,7 +60,8 @@ module.exports = {
           mnemonic: {
             phrase: mnemonicPhrase
           },
-          providerOrUrl: ``,
+          providerOrUrl: `https://kovan.poa.network`,
+          chainId: 42,
         }),
         gas: 4700000,
         gasPrice: web3.utils.toWei('46', 'gwei'),
@@ -73,7 +74,8 @@ module.exports = {
           mnemonic: {
             phrase: mnemonicPhrase
           },
-          providerOrUrl: ``,
+          providerOrUrl: `https://sokol.poa.network`,
+          chainId: 77,
         }),
         gas: 10000000,
         gasPrice: 5000000000,
